@@ -1,7 +1,12 @@
 # 📚 Data Structures and Algorithms in C++
 
-This repository contains my **complete Data Structures and Algorithms (DSA) practice in C++**, organized **topic-wise** for easy learning, revision, and interview preparation.  
-I am continuously updating this repository as I learn new concepts.
+This repository contains my **complete Data Structures and Algorithms (DSA) practice in C++**, organized **topic-wise** for easy learning, revision, and **technical interview preparation**.  
+I am continuously updating this repository as I learn and practice new concepts.
+
+---
+
+## 👤 Author
+**Sukhdev**
 
 ---
 
@@ -11,92 +16,97 @@ I am continuously updating this repository as I learn new concepts.
 ---
 
 ## 📝 Description
-Complete Data Structures and Algorithms (DSA) in C++ with topic-wise implementation, STL usage, and competitive programming practice. Continuously updated.
+A well-structured repository for **Data Structures and Algorithms (DSA) in C++**, covering core fundamentals, STL usage, and competitive programming practice (LeetCode & Codeforces).  
+This repository is **actively maintained and continuously updated**.
 
 ---
 
 ## 🗂️ Folder Structure
 
+```text
 C++_LANGUAGE/
 │
-├── 1codeforce/ # Codeforces practice problems
-├── 2Leetcode/ # LeetCode problems
+├── 1codeforce/        # Codeforces practice problems
+├── 2Leetcode/         # LeetCode problems
 │
-├── array/ # Array problems
-├── Basic/ # Basic C++ concepts
-├── basic maths/ # Maths related DSA problems
-├── binary search/ # Binary search problems
-├── Dynamic memory/ # new, delete, pointers
-├── Linked List/ # Linked list implementations
-├── oops concepts/ # OOPS in C++
-├── pattern/ # Pattern printing
-├── pointer/ # Pointer concepts
-├── question/ # Mixed practice questions
-├── Recursion/ # Recursion problems
-├── searching/ # Searching algorithms
-├── sorting/ # Sorting algorithms
-├── STL/ # C++ STL
-├── string/ # String problems
-├── test1/ # Testing code
-└── .vscode/ # VS Code configuration
+├── array/             # Array problems
+├── Basic/             # Basic C++ concepts
+├── basic maths/       # Mathematical DSA problems
+├── binary search/     # Binary search problems
+├── Dynamic memory/    # Pointers, new & delete
+├── Linked List/       # Linked list implementations
+├── oops concepts/     # Object Oriented Programming
+├── pattern/           # Pattern printing problems
+├── pointer/           # Pointer concepts
+├── question/          # Mixed practice questions
+├── Recursion/         # Recursion problems
+├── searching/         # Searching algorithms
+├── sorting/           # Sorting algorithms
+├── STL/               # C++ Standard Template Library
+├── string/            # String problems
+├── test1/             # Testing & practice code
+└── .vscode/           # VS Code configuration files
 
 
 ---
 
-## ✅ Topics Covered
+## ✅ Topics Covered  
 
-- Basics of C++
-- Arrays
-- Strings
-- Searching Algorithms
-- Sorting Algorithms
-- Binary Search
-- Recursion
-- Linked List
-- Pointers & Dynamic Memory
-- STL
-- OOPS Concepts
-- Pattern Problems
-- Competitive Programming (LeetCode & Codeforces)
-
----
-
-## 🔜 Upcoming Topics
-
-- Stack
-- Queue
-- Trees (Binary Tree, BST)
-- Heap / Priority Queue
-- Graphs (BFS, DFS)
-- Hashing
-- Greedy Algorithms
-- Dynamic Programming
-- Backtracking
-- Trie
+- ✔️ C++ Basics  
+- ✔️ Arrays  
+- ✔️ Strings  
+- ✔️ Searching Algorithms  
+- ✔️ Sorting Algorithms  
+- ✔️ Binary Search  
+- ✔️ Recursion  
+- ✔️ Linked List  
+- ✔️ Pointers & Dynamic Memory  
+- ✔️ STL (Vector, Map, Set, etc.)  
+- ✔️ OOPS Concepts  
+- ✔️ Pattern Problems  
+- ✔️ Competitive Programming Practice  
 
 ---
 
-## 🛠️ Tech Stack
+## 🔜 Upcoming Topics  
 
-- **Language:** C++
-- **Editor:** VS Code
-- **Compiler:** GCC / MinGW
-- **Platform:** Windows
-
----
-
-## 🎯 Goal
-
-- Strong DSA fundamentals  
-- Interview preparation  
-- Competitive programming practice  
+- 🔄 Stack  
+- 🔄 Queue  
+- 🔄 Trees (Binary Tree, BST)  
+- 🔄 Heap / Priority Queue  
+- 🔄 Graphs (BFS, DFS, Shortest Path)  
+- 🔄 Hashing  
+- 🔄 Greedy Algorithms  
+- 🔄 Dynamic Programming  
+- 🔄 Backtracking  
+- 🔄 Trie  
 
 ---
 
-## 📌 Note
-This repository is **actively maintained** and updated regularly.
+## 🛠️ Tech Stack  
+
+- **Language:** C++  
+- **Editor:** Visual Studio Code  
+- **Compiler:** GCC / MinGW  
+- **Platform:** Windows  
 
 ---
 
-⭐ If you find this repository helpful, don’t forget to **star** it!
-Happy Coding 🚀
+## 🎯 Goals  
+
+- Build strong **DSA fundamentals**  
+- Prepare for **technical interviews**  
+- Improve **problem-solving skills**  
+- Practice **competitive programming**  
+
+---
+
+## 📌 Note  
+This repository is **actively maintained** and updated regularly as part of my DSA learning journey.
+
+---
+
+## ⭐ Support  
+If you find this repository helpful, please **star ⭐ the repo** — it motivates me to keep improving!
+
+Happy Coding 💻🔥
