@@ -47,6 +47,32 @@ void reverse(Node* &head,Node* &tail)
 }
  
 // method 2
+void reverse2(Node* &head,Node* curr,Node* prev)
+{
+    // base case
+    if (curr==NULL)
+    {
+        head = prev;
+        return;
+    }
+    Node* forward = curr->next;
+    reverse2(head,forward,curr);
+    curr->next=prev;
+}
+
+// Method 3
+Node* reverse3(Node* head)
+{
+    if (head==NULL||head->next==NULL)
+    {
+        return head;
+    }
+    Node* smallhead = reverse3(head->next);
+    head->next->next=head;
+    head->next=NULL;
+    return smallhead;
+    
+}
 int main(int argc, char const *argv[])
 {
     Node* node1 =new Node(1);
@@ -58,8 +84,15 @@ int main(int argc, char const *argv[])
     insertAttail(tail,5);
     cout<<"Befor Reverse ";
     print(head);
-    cout<<"After Reverse ";
+    cout<<"After Reverse "<<endl;
+    cout<<"Method 1 ";
     reverse(head,tail);
+    print(head);
+    cout<<"Method 2 ";
+    reverse2(head,head,NULL);
+    print(head);
+    cout<<"Method 3 ";
+    head = reverse3(head);
     print(head);
     return 0;
 }
