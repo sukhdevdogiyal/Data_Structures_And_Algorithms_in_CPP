@@ -14,15 +14,15 @@ public:
     }
 };
 
-Node *buildtree(Node *root, int *data)
+Node *buildtree(int *data, int &i)
 {
-    static int i = -1;
-    i = i + 1;
-    root = new Node(data[i]);
+    i++;
     if (data[i] == -1)
         return NULL;
-    root->left = buildtree(root->left, data);
-    root->right = buildtree(root->right, data);
+
+    Node *root = new Node(data[i]);
+    root->left = buildtree(data, i);
+    root->right = buildtree(data, i);
     return root;
 }
 void inoder(Node *root)
@@ -42,15 +42,32 @@ void inoder(Node *root)
     // right child
     inoder(root->right);
 }
+int leafNode(Node *root)
+{
+    if (root->left == NULL && root->right == NULL) // leaf Node
+    {
+        return 1;
+    }
+    int left = 0, right = 0;
+    if (root->left != NULL) // left part
+        left = leafNode(root->left);
+
+    if (root->right != NULL) // right part
+        right = leafNode(root->right);
+
+    return left + right;
+}
 int main(int argc, char const *argv[])
 {
     int data[] = {1, 3, 7, -1, -1, 11, -1, -1, 5, 17, -1, -1, -1};
     Node *root = NULL;
-    root = buildtree(root, data);
+    int j = -1;
+    root = buildtree(data, j);
     cout << endl;
     cout << "InOrder Traversal : ";
     inoder(root);
     cout << endl;
+    cout << "Total leaf Node in Binary Tree : " << leafNode(root) << endl;
     cout << endl;
 
     return 0;
