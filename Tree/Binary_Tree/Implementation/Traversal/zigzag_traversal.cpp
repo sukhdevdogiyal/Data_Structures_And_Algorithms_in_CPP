@@ -34,39 +34,28 @@ vector<int> zigzag(Node *root)
 {
     queue<Node *> q;
     if (root != NULL)
-    {
         q.push(root);
-        q.push(NULL);
-    }
     vector<int> ans;
-    int check = 0;
+    bool lefttoright = true;
     while (!q.empty())
     {
-        Node *temp = q.front();
-        q.pop();
-        if (temp != NULL)
+        int size = q.size();
+        vector<int> result(size);
+        for (int i = 0; i < size; i++)
         {
-            ans.push_back(temp->data);
-            if (check % 2 == 0)
-            {
-                if (temp->right != NULL)
-                    q.push(temp->right);
-                if (temp->left != NULL)
-                    q.push(temp->left);
-            }
-            else
-            {
-                if (temp->left != NULL)
-                    q.push(temp->left);
-                if (temp->right != NULL)
-                    q.push(temp->right);
-            }
+            Node *temp = q.front();
+            q.pop();
+            int index = lefttoright ? i : size - i - 1;
+            result[index] = temp->data;
+            if (temp->left)
+                q.push(temp->left);
+            if (temp->right)
+                q.push(temp->right);
         }
-        else
+        lefttoright = !lefttoright;
+        for (auto i : result)
         {
-            if (!q.empty())
-                q.push(NULL);Social Experiment
-            check++;
+            ans.push_back(i);
         }
     }
     return ans;
@@ -86,24 +75,26 @@ int main(int argc, char const *argv[])
     int j = -1;
     root = buildtree(data, j);
     cout << endl;
-    cout << "Tree 1 InOrder Traversal : ";
+    cout << "Tree 1 ZigZag Traversal : ";
     vector<int> ans = zigzag(root);
     print(ans);
     cout << endl;
 
     // tree 2
-    int data1[] = {1, 2, 3, 4, -1, -1, -1, -1, 5, -1, -1};
+    int data1[] = {1, 2, 3, 4, -1, -1, -1, -1, 5, 6, -1, -1, -1};
     Node *root1 = NULL;
     int i = -1;
     root1 = buildtree(data1, i);
-    cout << "Tree 2 InOrder Traversal : ";
-    // inoder(root1);
+    cout << "Tree 2 ZigZag Traversal : ";
+    ans = zigzag(root1);
+    print(ans);
+
     cout << endl;
 
     return 0;
 }
 /*
-Tree :-
+Tree 1 :-
 
      1
    /   \
@@ -112,5 +103,15 @@ Tree :-
 7  11   17
 
 InOrder Traversal : 7 3 11 1 17 5
+
+Tree 2 :-
+
+       1
+     /   \
+    2     5
+   /     /
+  3     6
+ /
+4
 
 */
