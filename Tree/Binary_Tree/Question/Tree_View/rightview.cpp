@@ -31,6 +31,7 @@ Node *buildtree(int *data, int &i)
     return root;
 }
 
+// Approch #1
 // Right View of Binary Tree
 vector<int> rightview(Node *root)
 {
@@ -64,6 +65,29 @@ vector<int> rightview(Node *root)
     }
     return ans;
 }
+
+// Approch #2
+void solve(Node *root, int level, vector<int> &ans)
+{
+    if (root == NULL)
+        return;
+
+    // Right element
+    if (level == ans.size())
+    {
+        ans.push_back(root->data);
+    }
+    solve(root->right, level + 1, ans);
+    solve(root->left, level + 1, ans);
+}
+// Right View Approch #2
+vector<int> rightview2(Node *root)
+{
+    vector<int> ans;
+    solve(root, 0, ans);
+    return ans;
+}
+
 void print(vector<int> arr)
 {
     for (int i = 0; i < arr.size(); i++)
@@ -80,8 +104,11 @@ int main(int argc, char const *argv[])
     int j = -1;
     root = buildtree(data, j);
     cout << endl;
-    cout << "Right View of Binary Tree 1 : ";
+    cout << "Approch #1 Right View of Binary Tree 1 : ";
     vector<int> ans = rightview(root);
+    print(ans);
+    cout << "Approch #2 Right View of Binary Tree 1 : ";
+    ans = rightview2(root);
     print(ans);
     cout << endl;
 
@@ -90,8 +117,11 @@ int main(int argc, char const *argv[])
     Node *root1 = NULL;
     int i = -1;
     root1 = buildtree(data1, i);
-    cout << "Right View of Binary Tree 2 : ";
+    cout << "Approch #1 Right View of Binary Tree 2 : ";
     ans = rightview(root1);
+    print(ans);
+    cout << "Approch #2 Right View of Binary Tree 2 : ";
+    ans = rightview2(root1);
     print(ans);
 
     cout << endl;
@@ -101,8 +131,11 @@ int main(int argc, char const *argv[])
     Node *root2 = NULL;
     int k = -1;
     root2 = buildtree(data2, k);
-    cout << "Right View of Binary Tree 3 : ";
+    cout << "Approch #1 Right View of Binary Tree 3 : ";
     ans = rightview(root2);
+    print(ans);
+    cout << "Approch #2 Right View of Binary Tree 3 : ";
+    ans = rightview2(root2);
     print(ans);
 
     cout << endl;
