@@ -66,13 +66,13 @@ C++_LANGUAGE/
 - ✔️ OOPS Concepts  
 - ✔️ Pattern Problems  
 - ✔️ Competitive Programming Practice  
+- ✔️ Stack  
+- ✔️ Queue  
 
 ---
 
 ## 🔜 Upcoming Topics  
 
-- 🔄 Stack  
-- 🔄 Queue  
 - 🔄 Trees (Binary Tree, BST)  
 - 🔄 Heap / Priority Queue  
 - 🔄 Graphs (BFS, DFS, Shortest Path)  
