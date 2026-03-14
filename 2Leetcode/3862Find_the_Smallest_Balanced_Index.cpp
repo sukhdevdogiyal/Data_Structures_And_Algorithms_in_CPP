@@ -1,4 +1,4 @@
-// Find the Smallest Balanced Index
+// 3862. Find the Smallest Balanced Index
 // https://leetcode.com/contest/weekly-contest-492/problems/find-the-smallest-balanced-index/description/
 #include <iostream>
 #include <vector>
@@ -44,7 +44,7 @@ int smallestBalancedIndex(vector<int> &nums)
     int prod = 1;
     while (i>0)
     {
-        cout<<prod<<endl;
+        //cout<<prod<<endl;
         if(sum==prod&&i-1>=0)
         {
           ans = i;  

@@ -1,4 +1,5 @@
-// Minimum Capacity Box
+// 3861. Minimum Capacity Box
+// https://leetcode.com/problems/minimum-capacity-box/description/
 // https://leetcode.com/contest/weekly-contest-492/problems/minimum-capacity-box/description/
 #include <iostream>
 #include <vector>
@@ -16,16 +17,37 @@ int minimumIndex(vector<int> &capacity, int itemSize)
     }
     return ans;
 }
+void print(vector<int> arr)
+{
+    for (int i = 0; i < arr.size(); i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
 int main(int argc, char const *argv[])
 {
     vector<int> c = {1, 5, 3, 7};
     int s = 3;
+    cout << "capacity : ";
+    print(c);
+    cout << "Item Size : " << s << endl;
     cout << "Minimum Index for this capacity = " << minimumIndex(c, s) << endl;
+
+    cout << endl;
     c = {3, 5, 4, 3};
     s = 3;
+    cout << "capacity : ";
+    print(c);
+    cout << "Item Size : " << s << endl;
     cout << "Minimum Index for this capacity = " << minimumIndex(c, s) << endl;
+
+    cout << endl;
     c = {4};
     s = 5;
+    cout << "capacity : ";
+    print(c);
+    cout << "Item Size : " << s << endl;
     cout << "Minimum Index for this capacity = " << minimumIndex(c, s) << endl;
     return 0;
 }
