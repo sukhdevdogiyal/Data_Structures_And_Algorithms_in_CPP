@@ -13,6 +13,8 @@ bool findredundantbracket(string str)
         }
         else
         {
+            // ch is ')' or lowercase later
+            // lowercase later is ingnore
             if (ch == ')')
             {
                 bool isredundant = true;
